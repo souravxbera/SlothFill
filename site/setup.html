@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Read PDFs — SlothFill</title>
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">SlothFill</a>
+      <nav>
+        <a class="here" href="setup.html">Setup</a>
+        <a href="admission.html">Admission</a>
+        <a href="kyc.html">KYC</a>
+        <a href="job.html">Job</a>
+        <a class="run-local" href="https://github.com/souravxbera/SlothFill#readme" target="_blank" rel="noopener noreferrer">How to run it locally</a>
+      </nav>
+    </header>
+    <h1>Read your PDFs once</h1>
+    <p class="lede">Gemma reads an ID, a marksheet, or a resume on this computer and drafts a profile. You check it before any form is filled. The file is not uploaded anywhere.</p>
+    <form id="upload">
+      <div class="field">
+        <label for="pdfs">PDF files</label>
+        <input id="pdfs" name="pdfs" type="file" accept="application/pdf,.pdf" multiple />
+      </div>
+      <div class="actions">
+        <button type="submit" id="read">Read on this computer</button>
+        <button type="button" id="sample">Read the sample PDF</button>
+      </div>
+      <p id="slothfill-status" class="status">A text PDF is read as text. A scan is rendered and sent to Gemma vision. On CPU this can take a few minutes, and it happens once.</p>
+    </form>
+    <form id="folder-form">
+      <h2>Or read a folder on this computer</h2>
+      <p class="note">Lists the PDFs in that folder only. Subfolders stay put. Uncheck anything that should not become part of the profile, then read. Up to 20 files.</p>
+      <div class="field">
+        <label for="folder">Folder path</label>
+        <input id="folder" name="folder" type="text" placeholder="S:\Documents\papers" autocomplete="off" />
+      </div>
+      <div class="actions">
+        <button type="submit" id="list">List PDFs</button>
+      </div>
+      <ul id="pdf-list" class="pdf-list" hidden></ul>
+      <div class="actions">
+        <button type="button" id="read-folder" hidden>Read selected</button>
+      </div>
+      <div id="scan" class="scan" hidden>
+        <div id="scan-label" class="scan-label">Waiting to read.</div>
+        <progress id="scan-bar" max="1" value="0"></progress>
+      </div>
+    </form>
+  </div>
+  <script src="setup.js"></script>
+</body>
+</html>

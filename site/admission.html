@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admission — SlothFill</title>
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">SlothFill</a>
+      <nav>
+        <a href="setup.html">Setup</a>
+        <a class="here" href="admission.html">Admission</a>
+        <a href="kyc.html">KYC</a>
+        <a href="job.html">Job</a>
+        <a class="run-local" href="https://github.com/souravxbera/SlothFill#readme" target="_blank" rel="noopener noreferrer">How to run it locally</a>
+      </nav>
+    </header>
+    <h1>Undergraduate admission</h1>
+    <p class="lede">A typical first-year form. The course list is here on purpose: SlothFill leaves it blank because a preferred course is not in the profile.</p>
+    <form>
+      <div class="grid">
+        <div class="field span-2">
+          <label for="full_name">Full name</label>
+          <input id="full_name" name="full_name" autocomplete="name" />
+        </div>
+        <div class="field span-2">
+          <label for="father_name">Father's / Guardian's name</label>
+          <input id="father_name" name="father_name" />
+        </div>
+        <div class="field">
+          <label for="dob">Date of birth</label>
+          <input id="dob" name="dob" placeholder="DD/MM/YYYY" />
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option>Select</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option>Select</option>
+            <option>General</option>
+            <option>OBC</option>
+            <option>SC</option>
+            <option>ST</option>
+            <option>EWS</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="phone">Mobile number</label>
+          <input id="phone" name="phone" autocomplete="tel" />
+        </div>
+        <div class="field span-2">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" />
+        </div>
+        <div class="field span-2">
+          <label for="line1">Address line 1</label>
+          <input id="line1" name="line1" />
+        </div>
+        <div class="field span-2">
+          <label for="line2">Address line 2</label>
+          <input id="line2" name="line2" />
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <input id="city" name="city" />
+        </div>
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state" name="state">
+            <option>Select state</option>
+            <option>Delhi</option>
+            <option>Gujarat</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Maharashtra</option>
+            <option>Rajasthan</option>
+            <option>Tamil Nadu</option>
+            <option>Uttar Pradesh</option>
+            <option>West Bengal</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pincode">PIN code</label>
+          <input id="pincode" name="pincode" />
+        </div>
+        <div class="field">
+          <label for="course">Preferred course</label>
+          <select id="course" name="course">
+            <option>Select course</option>
+            <option>B.A. Economics</option>
+            <option>B.Sc. Computer Science</option>
+            <option>B.Com</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="board10">10th board</label>
+          <input id="board10" name="board10" />
+        </div>
+        <div class="field">
+          <label for="year10">10th year of passing</label>
+          <input id="year10" name="year10" />
+        </div>
+        <div class="field">
+          <label for="marks10">10th percentage</label>
+          <input id="marks10" name="marks10" />
+        </div>
+        <div class="field">
+          <label for="board12">12th board</label>
+          <input id="board12" name="board12" />
+        </div>
+        <div class="field">
+          <label for="year12">12th year of passing</label>
+          <input id="year12" name="year12" />
+        </div>
+        <div class="field">
+          <label for="marks12">12th percentage</label>
+          <input id="marks12" name="marks12" />
+        </div>
+        <div class="field span-2">
+          <label for="school12">12th institution</label>
+          <input id="school12" name="school12" />
+        </div>
+        <div class="field">
+          <label for="pan">PAN</label>
+          <input id="pan" name="pan" />
+        </div>
+        <div class="field">
+          <label for="aadhaar">Aadhaar</label>
+          <input id="aadhaar" name="aadhaar" />
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" id="slothfill">Fill from local profile</button>
+        <button type="submit">Submit application</button>
+      </div>
+      <p id="slothfill-status" class="status"></p>
+    </form>
+  </div>
+  <script src="fill.js"></script>
+</body>
+</html>

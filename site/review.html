@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Review profile — SlothFill</title>
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">SlothFill</a>
+      <nav>
+        <a href="setup.html">Setup</a>
+        <a href="admission.html">Admission</a>
+        <a href="kyc.html">KYC</a>
+        <a href="job.html">Job</a>
+        <a class="run-local" href="https://github.com/souravxbera/SlothFill#readme" target="_blank" rel="noopener noreferrer">How to run it locally</a>
+      </nav>
+    </header>
+    <h1>Check the profile once</h1>
+    <p class="lede" id="source">Loading the profile stored on this computer.</p>
+    <p class="note" id="report"></p>
+    <form id="review">
+      <div class="grid">
+        <div class="field"><label for="name">Full name</label><input id="name" /></div>
+        <div class="field"><label for="father_name">Father's / guardian's name</label><input id="father_name" /></div>
+        <div class="field"><label for="dob">Date of birth</label><input id="dob" placeholder="YYYY-MM-DD" /></div>
+        <div class="field"><label for="gender">Gender</label><input id="gender" /></div>
+        <div class="field"><label for="phone">Mobile</label><input id="phone" /></div>
+        <div class="field"><label for="email">Email</label><input id="email" /></div>
+        <div class="field span-2"><label for="line1">Address line 1</label><input id="line1" /></div>
+        <div class="field span-2"><label for="line2">Address line 2</label><input id="line2" /></div>
+        <div class="field"><label for="city">City</label><input id="city" /></div>
+        <div class="field"><label for="state">State</label><input id="state" /></div>
+        <div class="field"><label for="pincode">PIN code</label><input id="pincode" /></div>
+        <div class="field"><label for="country">Country</label><input id="country" /></div>
+        <div class="field"><label for="pan">PAN</label><input id="pan" /></div>
+        <div class="field"><label for="aadhaar_masked">Aadhaar, masked</label><input id="aadhaar_masked" /></div>
+        <div class="field"><label for="category">Category</label><input id="category" /></div>
+        <div class="field"><label for="nationality">Nationality</label><input id="nationality" /></div>
+      </div>
+      <h2>Class 10</h2>
+      <div class="grid">
+        <div class="field"><label for="board10">Board</label><input id="board10" /></div>
+        <div class="field"><label for="year10">Year</label><input id="year10" /></div>
+        <div class="field"><label for="marks10">Marks</label><input id="marks10" /></div>
+        <div class="field"><label for="school10">School</label><input id="school10" /></div>
+      </div>
+      <h2>Class 12</h2>
+      <div class="grid">
+        <div class="field"><label for="board12">Board</label><input id="board12" /></div>
+        <div class="field"><label for="year12">Year</label><input id="year12" /></div>
+        <div class="field"><label for="marks12">Marks</label><input id="marks12" /></div>
+        <div class="field"><label for="school12">College</label><input id="school12" /></div>
+      </div>
+      <div class="actions">
+        <button type="submit" id="save">Save on this computer</button>
+        <a href="admission.html">Fill the admission form</a>
+      </div>
+      <p id="slothfill-status" class="status"></p>
+    </form>
+  </div>
+  <script src="review.js"></script>
+</body>
+</html>

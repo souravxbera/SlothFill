@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+data/*.json
+.env
+SKILLS.md
+*.gguf
+.entire/
+data/tinker_adapter/
+data/merged_mapper/
+data/peft_adapter/
+data/qwen35_base/
+tools/

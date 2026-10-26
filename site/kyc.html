@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KYC — SlothFill</title>
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">SlothFill</a>
+      <nav>
+        <a href="setup.html">Setup</a>
+        <a href="admission.html">Admission</a>
+        <a class="here" href="kyc.html">KYC</a>
+        <a href="job.html">Job</a>
+        <a class="run-local" href="https://github.com/souravxbera/SlothFill#readme" target="_blank" rel="noopener noreferrer">How to run it locally</a>
+      </nav>
+    </header>
+    <h1>KYC-style check</h1>
+    <p class="lede">The kind of form that asks for an identity document. The Aadhaar value that gets filled is already masked.</p>
+    <form>
+      <div class="grid">
+        <div class="field span-2">
+          <label for="applicant_name">Applicant name</label>
+          <input id="applicant_name" name="applicant_name" />
+        </div>
+        <div class="field">
+          <label for="birth">Date of birth</label>
+          <input id="birth" name="birth" type="date" />
+        </div>
+        <div class="field">
+          <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" name="gender" value="Female" /> Female</label>
+            <label><input type="radio" name="gender" value="Male" /> Male</label>
+            <label><input type="radio" name="gender" value="Other" /> Other</label>
+          </fieldset>
+        </div>
+        <div class="field">
+          <label for="pan_number">Permanent Account Number</label>
+          <input id="pan_number" name="pan_number" />
+        </div>
+        <div class="field">
+          <label for="aadhaar_number">Aadhaar number</label>
+          <input id="aadhaar_number" name="aadhaar_number" />
+        </div>
+        <div class="field">
+          <label for="mobile">Mobile number</label>
+          <input id="mobile" name="mobile" />
+        </div>
+        <div class="field">
+          <label for="mail">Email address</label>
+          <input id="mail" name="mail" type="email" />
+        </div>
+        <div class="field span-2">
+          <label for="nationality">Nationality</label>
+          <input id="nationality" name="nationality" />
+        </div>
+        <div class="field span-2">
+          <label for="street">Residential address</label>
+          <input id="street" name="street" />
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <input id="city" name="city" />
+        </div>
+        <div class="field">
+          <label for="postal">Postal code</label>
+          <input id="postal" name="postal" />
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" id="slothfill">Fill from local profile</button>
+        <button type="submit">Submit KYC</button>
+      </div>
+      <p id="slothfill-status" class="status"></p>
+    </form>
+  </div>
+  <script src="fill.js"></script>
+</body>
+</html>

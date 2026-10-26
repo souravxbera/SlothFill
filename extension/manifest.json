@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "SlothFill",
+  "version": "0.1.0",
+  "description": "Fill a form from your on-device profile. One click. Never submits.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8787/*"],
+  "action": {
+    "default_title": "SlothFill",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

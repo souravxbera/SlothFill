@@ -1,0 +1,37 @@
+{
+  "synthetic": true,
+  "name": "Sana Qureshi",
+  "father_name": "Imran Qureshi",
+  "dob": "2003-08-14",
+  "gender": "Female",
+  "phone": "9000000001",
+  "email": "sana.qureshi@example.com",
+  "address": {
+    "line1": "18 Banyan Lane",
+    "line2": "Andheri West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400058",
+    "country": "India"
+  },
+  "pan": "SLTHF0000A",
+  "aadhaar_masked": "XXXX-XXXX-0000",
+  "category": "OBC",
+  "nationality": "Indian",
+  "education": [
+    {
+      "level": "12",
+      "board": "Maharashtra State Board",
+      "year": "2021",
+      "marks": "91.6%",
+      "institution": "St. Mary's Junior College"
+    },
+    {
+      "level": "10",
+      "board": "Maharashtra State Board",
+      "year": "2019",
+      "marks": "93.2%",
+      "institution": "St. Mary's High School"
+    }
+  ]
+}

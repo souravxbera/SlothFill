@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Google-style form — SlothFill</title>
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">SlothFill</a>
+      <nav>
+        <a href="setup.html">Setup</a>
+        <a href="admission.html">Admission</a>
+        <a href="kyc.html">KYC</a>
+        <a href="job.html">Job</a>
+        <a class="run-local" href="https://github.com/souravxbera/SlothFill#readme" target="_blank" rel="noopener noreferrer">How to run it locally</a>
+      </nav>
+    </header>
+    <h1>Google-style form</h1>
+    <p class="lede">Same structure as a Google Form: a heading, an unlabeled text box, and choices that are not radio inputs.</p>
+    <form>
+      <div role="list">
+        <div role="listitem" class="field">
+          <div role="heading" id="q-name">Name *</div>
+          <input type="text" aria-labelledby="q-name" autocomplete="off" />
+        </div>
+        <div role="listitem" class="field">
+          <div role="heading" id="q-year">Year *</div>
+          <div role="radiogroup" aria-labelledby="q-year">
+            <label><div role="radio" data-value="1st" aria-checked="false"></div> 1st</label>
+            <label><div role="radio" data-value="2nd" aria-checked="false"></div> 2nd</label>
+            <label><div role="radio" data-value="3rd" aria-checked="false"></div> 3rd</label>
+            <label><div role="radio" data-value="4th" aria-checked="false"></div> 4th</label>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" id="slothfill">Fill from local profile</button>
+        <button type="submit">Submit</button>
+      </div>
+      <p id="slothfill-status" class="status"></p>
+    </form>
+  </div>
+  <script>
+    document.querySelectorAll("[role='radio']").forEach((radio) => {
+      radio.addEventListener("click", () => {
+        const group = radio.closest("[role='radiogroup']");
+        group.querySelectorAll("[role='radio']").forEach((item) => {
+          item.setAttribute("aria-checked", item === radio ? "true" : "false");
+        });
+      });
+    });
+  </script>
+  <script src="fill.js"></script>
+</body>
+</html>
